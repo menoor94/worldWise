@@ -1,9 +1,12 @@
 import styles from "./CountryList.module.css";
-import Spinner from "./Spinner";
+import Spinner from "../../assets/Spinner";
 import CountryItem from "./CountryItem";
-import Message from "./Message";
+import Message from "../../assets/Message";
+import { useCities } from "../../contexts/CitiesContext";
 
-function CountriesList({ cities, isLoading }) {
+function CountriesList() {
+  const { cities, isLoading } = useCities();
+
   if (isLoading) return <Spinner />;
 
   if (!cities.length) return <Message message="Please add your city" />;
@@ -14,7 +17,6 @@ function CountriesList({ cities, isLoading }) {
 
     return acc.find((c) => c.country === currentCountry) ? acc : [...acc, cur];
   }, []);
-  console.log(countries);
 
   return (
     <ul className={styles.countryList}>
