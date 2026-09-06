@@ -1,52 +1,41 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
-      "cityName": "Madrid",
+      "cityName": "Escalona",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
+      "date": "2026-09-06T14:06:30.487Z",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": "40.12849105685408",
+        "lng": "-4.416503906250001"
       },
-      "id": 17806751
+      "notes": "hello",
+      "id": "__K6y_-lKuY"
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "cityName": "Kangavar",
+      "country": "Iran",
+      "emoji": "🇮🇷",
+      "date": "2026-09-06T14:07:38.819Z",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
+        "lat": "34.513346401475786",
+        "lng": "47.97592163085938"
       },
-      "id": 98443197
+      "notes": "Welcome to Kangavar\n",
+      "id": "EGysi0eeuVQ"
     },
     {
-      "cityName": "Zurich",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "GREAT 😃",
+      "cityName": "Golestan",
+      "country": "Iran",
+      "emoji": "🇮🇷",
+      "date": "2026-09-06T14:07:56.800Z",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
+        "lat": "35.52104976129943",
+        "lng": "51.15921020507813"
       },
-      "id": 984431122
+      "notes": "gradma's house\n",
+      "id": "i-rrpEvJE_0"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
