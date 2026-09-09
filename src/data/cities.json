@@ -1,18 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Escalona",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2026-09-06T14:06:30.487Z",
-      "position": {
-        "lat": "40.12849105685408",
-        "lng": "-4.416503906250001"
-      },
-      "notes": "hello",
-      "id": "__K6y_-lKuY"
-    },
-    {
       "cityName": "Kangavar",
       "country": "Iran",
       "emoji": "🇮🇷",

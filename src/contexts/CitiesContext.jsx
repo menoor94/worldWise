@@ -4,6 +4,7 @@ import {
   createContext,
   useContext,
   useReducer,
+  useCallback,
 } from "react";
 
 const BASE_URL = "http://localhost:9000";
@@ -42,6 +43,7 @@ function reducer(state, action) {
         ...state,
         isLoading: false,
         cities: [...state.cities, action.payload],
+        curCity: action.payload,
       };
 
     case "cities/deleted":
@@ -49,6 +51,7 @@ function reducer(state, action) {
         ...state,
         isLoading: false,
         cities: state.cities.filter((city) => city.id !== action.payload),
+        curCity: {},
       };
     case "rejected":
       return {
@@ -90,20 +93,25 @@ function CitiesProvider({ children }) {
     fetchData();
   }, []);
 
-  async function getCity(id) {
-    try {
-      // setIsLoading(true);
-      dispatch({ type: "loading" });
+  const getCity = useCallback(
+    async function getCity(id) {
+      if (Number(id) === curCity.id) return;
 
-      const res = await fetch(`${BASE_URL}/cities/${id}`);
-      const data = await res.json();
-      // setCurCity(data);
-      dispatch({ type: "city/loaded", payload: data });
-    } catch (err) {
-      console.error(err);
-      dispatch({ type: "error", payload: err });
-    }
-  }
+      try {
+        // setIsLoading(true);
+        dispatch({ type: "loading" });
+
+        const res = await fetch(`${BASE_URL}/cities/${id}`);
+        const data = await res.json();
+        // setCurCity(data);
+        dispatch({ type: "city/loaded", payload: data });
+      } catch (err) {
+        console.error(err);
+        dispatch({ type: "error", payload: err });
+      }
+    },
+    [curCity.id],
+  );
 
   async function createCity(newCity) {
     try {
